@@ -1,6 +1,7 @@
 package com.googlecode.ross.recalc;
 
 import java.util.List;
+import com.googlecode.ross.recalc.ops.OperandAmountException;
 
 public abstract class OperatorNode implements Operator {
 
@@ -47,8 +48,8 @@ public abstract class OperatorNode implements Operator {
     if (numOperands() == children.size()) {
       return calc(children);
     } else {
-      //throw some exception
-      return 0.0;
+      throw new OperandAmountException("There are supposed to be " +
+                                      numOperands() + "operands for a " + this);
     }
   }
 }
