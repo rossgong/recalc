@@ -3,6 +3,10 @@ package com.googlecode.ross.recalc;
 
 public interface Operator {
   
-  public double calc(java.util.List<Operator> ops);
+  public <T extends Operator> double calc(java.util.List<T> ops);
   
+  public double calc();
+
+  public <T extends Operator> boolean checkOps(java.util.List<T> ops);
 }
+
