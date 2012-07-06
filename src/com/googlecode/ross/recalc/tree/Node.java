@@ -42,5 +42,10 @@ public class Node<T> {
   
   public void addChild (Node<T> child) {
     children.add(child);
+    child.setParent(this);
+  }
+  
+  private void setParent (Node<T> parent) {
+    this.parent = parent;
   }
 }
