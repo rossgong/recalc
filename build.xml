@@ -3,7 +3,8 @@
   <property name="dir.src" value="${basedir}/src"/>
   <property name="dir.out" value="${basedir}/bin"/>
   <property name="file.log" value="${dir.out}/log.txt"/>
-  
+  <property name="dir.test" value="${basedir}/junit"/>
+
   <target name="clean" description="cleans previous compilation">
     <delete dir="${dir.out}"/>
   </target>
