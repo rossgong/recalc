@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<project name="recalc" default="compile">
+  <property name="dir.src" value="src"/>
+  <property name="dir.class" value="bin"/>
+  
+  <target name="clean" description="cleans previous compilation">
+    <delete dir="${dir.class}"/>
+    <delete dir="${dir.log}"/>
+  </target>
+  
+  <target name="compile" description="compiles the source">
+    <mkdir dir="${dir.class}"/>
+    
+    <record name="log" action="start"/>
+    <javac srcdir="${dir.src}" destdir="${dir.class}" includeantruntime="false"/>
+    <record name="log" action="stop"/>
+  </target>
+</project>
