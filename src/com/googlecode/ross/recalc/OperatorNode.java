@@ -33,16 +33,18 @@ public abstract class OperatorNode implements Operator {
   }
 
   public void addChild (OperatorNode child) {
-    children.add(child);
-    child.setParent(this);
+    if (children.size() < numOperands()) {
+      children.add(child);
+      child.setParent(this);
+    }
   }
 
-  private void setParent (OperatorNode parent) {
+  protected void setParent (OperatorNode parent) {
     this.parent = parent;
   }
 
   public double calc() {
-    if (checkOps(children)) {
+    if (numOperands() == children.size()) {
       return calc(children);
     } else {
       //throw some exception

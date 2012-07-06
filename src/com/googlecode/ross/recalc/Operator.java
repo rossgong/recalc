@@ -7,6 +7,6 @@ public interface Operator {
   
   public double calc();
 
-  public <T extends Operator> boolean checkOps(java.util.List<T> ops);
+  public int numOperands ();
 }
 
