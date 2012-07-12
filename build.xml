@@ -16,4 +16,11 @@
     <javac srcdir="${dir.src}" destdir="${dir.out}" includeantruntime="false"/>
     <record name="${file.log}" action="stop"/>
   </target>
+
+  <target name="test-compile" depends="compile" description="compiles tests">
+    <javac srcdir="${basefir}/test" destdir="${dir.out}" 
+           sourcepath="$dir.out}" includeantruntime="false"/>
+
+    
+  </target>
 </project>
