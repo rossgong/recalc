@@ -13,6 +13,7 @@ public class Function extends UnaryOperator {
   }
 
   public void add (OperatorNode node) {
+    if (node instanceof Variable) node = var;
     if (root == null) {
       root = node;
       curr = root;

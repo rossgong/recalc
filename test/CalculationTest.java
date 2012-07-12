@@ -13,7 +13,7 @@ public class CalculationTest {
     f.add(new Multiply());
     f.add(new Number(7));
     f.add(new Divide());
-    f.add(new Number(2));
+    f.add(new Variable());
 
     System.out.println(f + "(2)=" + f.calc());
   }
