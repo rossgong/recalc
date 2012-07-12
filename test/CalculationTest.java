@@ -1,5 +1,6 @@
 import com.googlecode.ross.recalc.*;
 import com.googlecode.ross.recalc.ops.*;
+import com.googlecode.ross.recalc.ops.Number;
 
 public class CalculationTest {
   public static void main (String[] args) {

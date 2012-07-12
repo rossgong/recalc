@@ -18,7 +18,7 @@
   </target>
 
   <target name="test-compile" depends="compile" description="compiles tests">
-    <javac srcdir="${basefir}/test" destdir="${dir.out}" 
+    <javac srcdir="${basedir}/test" destdir="${dir.out}" 
            sourcepath="$dir.out}" includeantruntime="false"/>
 
     
