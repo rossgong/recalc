@@ -27,7 +27,7 @@ public class Parser {
 
       } else {
         OperatorNode node = null;
-        if (token.matches("(-?\\d+(\\.\\d+)?")) {
+        if (token.matches("-?\\d+(\\.\\d+)?")) {
           node = new Number (Double.parseDouble(token));
         } else {
           switch (token) {
@@ -44,9 +44,11 @@ public class Parser {
               node = new Divide();
           }
         }
+        System.out.println("ADDING:" + node);
 
         f.add(node);
       }
+      ind ++;
     }
     return f;
   }
