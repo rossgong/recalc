@@ -7,4 +7,9 @@ public abstract class BinaryOperator extends OperatorNode {
   public int numOperands () {
     return 2;
   }
+
+  public String toString() {
+    return getChildren().get(0) + getStringRepresentation()
+            + getChildren().get(1);
+  }
 }

@@ -7,5 +7,7 @@ public interface Operator {
   public double calc();
 
   public int numOperands ();
+
+  public String getStringRepresentation();
 }
 
