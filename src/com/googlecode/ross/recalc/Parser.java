@@ -24,32 +24,41 @@ public class Parser {
           token="0";
         }
         token+=curr;
+        if (ind+1 == s.length()) {
+          
+          f.add(new Number (Double.parseDouble(token)));
+          System.out.println("out");
+        }
 
       } else {
         OperatorNode node = null;
         if (token.matches("-?\\d+(\\.\\d+)?")) {
           node = new Number (Double.parseDouble(token));
+          f.add(node);
         } else {
-          switch (token) {
-            case "+":
-              node = new Add();
-              break;
-            case "-":
-              node = new Subtract();
-              break;
-            case "*":
-              node = new Multiply();
-              break;
-            case "/":
-              node = new Divide();
-          }
+          System.err.println("ERR");
         }
-        System.out.println("ADDING:" + node);
+        switch (curr) {
+          case "+":
+            node = new Add();
+            break;
+          case "-":
+            node = new Subtract();
+            break;
+          case "*":
+            node = new Multiply();
+            break;
+          case "/":
+            node = new Divide();
+        }
 
         f.add(node);
+        token = "";
       }
       ind ++;
+      System.out.println("t:" + token);
     }
+    f.addChild(new Number(0));
     return f;
   }
 }
