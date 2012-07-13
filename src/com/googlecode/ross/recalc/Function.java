@@ -39,7 +39,11 @@ public class Function extends UnaryOperator {
     return root.calc();
   }
 
-  public String toString() {
+  public String getStringRepresentation() {
+    return "f";
+  }
+
+  public String getFunctionString() {
     return root.toString();
   }
 

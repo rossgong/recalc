@@ -19,6 +19,14 @@ public class Number extends OperatorNode {
     return 0;
   }
 
+  public String getStringRepresentation() {
+    return this.toString();
+  }
+
+  public String toString() {
+    return String.valueOf(val);
+  }
+
   public <T extends Operator> double calc (java.util.List<T> ops) {
     return val;
   }

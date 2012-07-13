@@ -8,7 +8,7 @@ public class Add extends BinaryOperator {
     return ops.get(0).calc() + ops.get(1).calc();
   }
 
-  public String toString () {
+  public String getStringRepresentation() {
     return "+";
   }
 }

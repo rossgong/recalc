@@ -15,6 +15,7 @@ public class CalculationTest {
     f.add(new Divide());
     f.add(new Variable());
 
-    System.out.println(f + "(2)=" + f.calc());
+    System.out.println(f + "=" + f.calc());
+    System.out.println(f.getFunctionString());
   }
 }

@@ -27,6 +27,14 @@ public class Variable extends OperatorNode {
     return 0;
   }
 
+  public String getStringRepresentation() {
+    return "X";
+  }
+
+  public String toString() {
+    return getStringRepresentation();
+  }
+
   public <T extends Operator> double calc (java.util.List<T> ops) {
     return val;
   }
