@@ -19,7 +19,7 @@ public class Variable extends OperatorNode {
     setParent(parent);
   }
 
-  public void setVal(double val) {
+  public void setValue(double val) {
     this.val = val;
   }
 
